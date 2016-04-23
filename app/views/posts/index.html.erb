@@ -1,6 +1,9 @@
 <h1>Follow Me</h1>
 
+
 <% @posts.each do |post| %>
-<%= image_tag post.image.url(:medium) %> <br>
+<row>
+<%= link_to (image_tag post.image.url(:medium)), post_path(post) %> <br>
 <%= post.caption %>
+</row>
 <% end %>
