@@ -1,9 +1,21 @@
-<h1>Follow Me</h1>
-
-
-<% @posts.each do |post| %>
-<row>
-<%= link_to (image_tag post.image.url(:medium)), post_path(post) %> <br>
-<%= post.caption %>
-</row>
-<% end %>
+<div class="posts-wrapper">
+  <div class="row">
+    <% @posts.each do |post| %>
+    <div class="post">
+      <div class="post-head">
+        <div class="name">
+          Matt Kellough
+        </div>
+      </div>
+      <div class="image">
+        <div class="center-block">
+          <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
+        </div>
+      </div>
+      <p class="caption">
+        <%= post.caption %>
+      </p>
+    </div>
+    <% end %>
+  </div>
+</div>
