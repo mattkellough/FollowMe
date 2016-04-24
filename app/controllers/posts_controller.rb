@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :update, :edit, :destroy]
   before_action :authenticate_user!
+  before_action :my_post, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -51,6 +52,13 @@ class PostsController < ApplicationController
 
   def find_post
     @post = Post.find(params[:id])
+  end
+
+  def my_post
+    unless current_user == @post.user
+      flash[:alert] = "That post doesn't belong to you!"
+      redirect_to root_path
+    end
   end
 
 
