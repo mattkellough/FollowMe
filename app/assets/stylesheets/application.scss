@@ -24,9 +24,14 @@ body {
   sans-serif;
 }
 /* ## NAVBAR CUSTOMISATIONS ## */
-.navbar-brand { a{
+.navbar-brand {
+  a {
   color: #125688;
 }
+  img {
+    height: 175%;
+    margin-top: -0.4em;
+  }
 }
 
 .navbar-default {
