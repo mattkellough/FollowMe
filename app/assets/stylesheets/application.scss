@@ -18,6 +18,15 @@
   padding-left: 0.8em;
 }
 
+html {
+  height: 100%;
+}
+
+.input-lg {
+  margin: 0.4em 0 0.4em 0;
+  width: 100%;
+}
+
 body {
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica,
@@ -147,4 +156,55 @@ body {
 .edit-links {
   margin-top: 20px;
   margin-bottom: 40px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+.alert {
+  margin-bottom: 0px;
+}
+
+.registration-bg {
+  padding-top: 10em;
+  height: 100%;
+  background-image: image-url('regbackg.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 5em;
+}
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border: none;
+}
+.panel {
+  border-radius: 8px;
+}
+.panel-heading{
+  h1 {
+    text-align: center;
+  }
+}
+
+.login-bg {
+  padding-top: 10em;
+  padding-bottom: 10em;
+  height: 100%;
+  background-image: image-url('loginbg.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#image-preview {
+  margin: 0px auto;
+}
+#post_image {
+  padding: 1em;
+  margin: 0px auto;
 }
