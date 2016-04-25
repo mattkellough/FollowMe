@@ -5,9 +5,14 @@
       <div class="user-name">
         <%= post.user.user_name %>
       </div>
+      <div class="time-ago">
+        <%= time_ago_in_words post.created_at %>
+      </div>
     </div>
-    <div class="image center-block">
-      <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
+    <div class="image">
+      <div class="center-block">
+        <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
+      </div>
     </div>
     <div class="post-bottom">
       <div class="caption">
@@ -19,7 +24,7 @@
         </div>
         <div class="comments" id="comments_<%= post.id %>">
           <% if post.comments %>
-            <%= render post.comments, post: post %>
+          <%= render post.comments, post: post %>
           <% end %>
         </div>
       </div>
@@ -30,7 +35,7 @@
       </div>
       <div class="comment-form col-sm-11">
         <%= form_for [post, post.comments.build], remote: true do |f| %>
-          <%= f.text_field :content, placeholder: 'Add a comment...', class: "comment_content", id: "comment_content_#{post.id}" %>
+        <%= f.text_field :content, placeholder: 'Add a comment...', class: "comment_content", id: "comment_content_#{post.id}" %>
         <% end %>
       </div>
     </div>
