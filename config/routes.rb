@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   get ':user_name', to: 'profiles#show', as: :profile
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  get ':user_name/edit', to: 'profiles#edit', as: :edit_profile
 
+  patch ':user_name/edit', to: 'profiles#update', as: :update_profile
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :posts do
